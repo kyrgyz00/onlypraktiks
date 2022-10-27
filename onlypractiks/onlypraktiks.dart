@@ -8,10 +8,11 @@ void main() {
   // task4_switch(3);
   // task_5();
   // task_6();
-  // task_7;
+  // task_7();
   // task_8();
   // task_9();
-  // task_10();
+  // task_10("5");
+  task_10_int(3);
   // task_11(23);
   // task_12(123322);
   // task_13();
@@ -27,6 +28,7 @@ task_1() {
     'uuj',
     10001,
   ];
+
   print(rules.first);
   print(rules.last);
 }
@@ -78,9 +80,11 @@ task4_switch(int s) {
     case 1:
       result = 'Monday';
       break;
+
     case 2:
       result = 'Tuesday';
       break;
+
     case 3:
       result = 'Wednesday';
       break;
@@ -96,15 +100,18 @@ task4_switch(int s) {
     case 7:
       result = 'Sunday';
       break;
+
     default:
       result = 'choose number of day';
       break;
   }
+
   print(result);
 }
 
 void task_5() {
   String a = "Loading...";
+
   for (int i = 0; i <= 8; i++) {
     print(a);
   }
@@ -114,12 +121,11 @@ task_6() {
   int a = 46;
   int b = 34;
   int c = 12;
+
   if (a + b == c || b + c == a || c + a == b) {
     print(a + b == c || b + c == a || c + a == b);
   } else {
-    print(a);
-    print(b);
-    print(c);
+    print(a * b * c);
   }
 }
 
@@ -132,31 +138,67 @@ task_7() {
   String address = stdin.readLineSync()!;
   stdout.write('what is your hobby?');
   String hobby = stdin.readLineSync()!;
+
   print('Your name is $name');
   print("Your age is $age");
   print("your address is $address");
   print("Your hobby is $hobby");
+
+  String myName = "Bek";
+  int myAge = 20;
+  String myAddress = "Bishkek";
+  String myHobby = "Walk";
+
+  if (name == myName &&
+      age == myAge &&
+      address == myAddress &&
+      hobby == myHobby) {
+    print("let's be friends");
+  } else if (name == myName) {
+    print("our names are the same");
+  } else if (age == myAge) {
+    print("we are the same age");
+  } else if (address == myAddress) {
+    print("we are neighbours");
+  } else if (hobby == myHobby) {
+    print("we are the same hobbies");
+  } else {
+    print("uncorrect");
+  }
 }
 
-task_8() {}
-
 task_9() {
-  int a = 1;
-  int b = 0;
+  int i = 1;
+  int sum = 0;
   // for (int a = 0; a <= 100; a++) {
   //   print(a);
   // }
-  while (a < 100) {
-    b = a + b;
-    a++;
+  while (i <= 100) {
+    sum = sum + i;
+    i++;
   }
-  print(b);
-  print(a);
-  print(b / a);
+
+  print(sum / 100);
+  // print(b);
+  // print(a);
+  // print(b / a);
 }
 
-task_10() {
-  int n;
+task_10(String n) {
+  int rr = int.parse(n) + int.parse(n + n) + int.parse(n + n + n);
+  print(int.parse(n));
+  print(int.parse(n + n));
+  print(int.parse(n + n + n));
+  print(rr);
+}
+
+task_10_int(int n) {
+  String rr = n.toString();
+  print(rr);
+  print(rr + rr);
+  print(rr + rr + rr);
+  print(int.parse(rr) + int.parse(rr + rr) + int.parse(rr + rr + rr));
+  
 }
 
 task_11(int age) {
@@ -186,14 +228,33 @@ task_12(int a) {
 }
 
 task_13() {
-  int d;
-  print('write a number');
-  int a = int.parse(stdin.readLineSync()!);
-  while (a != 0) {
-    stdout.write("write number!");
+  bool isNoZero = true;
+  int counter = 0;
+  double sum = 0;
+
+  while (isNoZero) {
+    stdout.write('write number');
+    int a = int.parse(stdin.readLineSync()!);
+    // print('write a number');
+    // stdout.write("write number!");
+
+    counter++;
+    if (a == 0) {
+      // d = a;
+      // stdout.write("write number!");
+      print(isNoZero = false);
+    }
+
+    sum += a;
   }
-  if (a != 0) {
-    // d = a;
-    stdout.write("write number!");
-  }
+  print("count of all $counter");
+  print(sum / counter);
 }
+
+
+// if(a == '+'){} 
+// else if (a == '-'){} 
+// else if (a == 'yes'){} 
+// else {
+//   print('vvedite eshe raz')
+//  answer = stding.readlinesync();}

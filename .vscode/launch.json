@@ -9,7 +9,7 @@
             "request": "launch",
             "type": "dart",
             "console": "terminal",
-            "program": "onlypraktiks.dart"
+            "program": "onlypractiks/onlypraktiks.dart"
         }
     ]
 }
