@@ -11,8 +11,8 @@ void main() {
   // task_7();
   // task_8();
   // task_9();
-  // task_10("5");
-  task_10_int(3);
+  task_10("5");
+  // task_10_int(3);
   // task_11(23);
   // task_12(123322);
   // task_13();
